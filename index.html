@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talisman - Ankieta</title>
+    <link rel="StyleSheet" href="styles.css" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cormorant+SC:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="topnav">
+      <a class="activate" href="#">Strona główna</a>
+      <a href="#">Potfolio</a>
+      <a href="#">Więcej o mnie</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <img class="title-image" src="logo.png" alt="The Elder Scrolls" />
+      </div>
+
+      <div class="title-description">
+        <h1 id="title-text" class="text-center">Ankieta</h1>
+      </div>
+
+      <p id="description" class="description text-center">
+        Dzięi za udział w ankiecie!
+      </p>
+    </header>
+
+    <!-- Survey -->
+    <div class="surveybox">
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Imię i nazwisko</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Wiek</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+
+        <div class="form-group">
+          <p>Jak często zdarza Ci się grać w Talisman?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Wybierz jedną z opcji</option>
+            <option value="5">Bardzo często</option>
+            <option value="4">Często</option>
+            <option value="3">Raz na jakiś czas</option>
+            <option value="2">Sporadycznie</option>
+            <option value="1">W ogóle nie gram tą grę</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Czy poleciłbyś Talisman znojamemu?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Zdecydowanie tak!</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Może</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="no"
+              type="radio"
+              class="input-radio"
+            />Raczej nie</label
+          >
+        </div>
+      </form>
+    </div>
+
+    <p>Który z dużych dodatków do Talisman posiadasz?</p>
+    <div class="bigAddOnsList">
+      <ul>
+        <li>
+          <input type="checkbox" id="d1" />
+          <label for="d1"><img src="Podziemia.jpg" alt="Podziemia" /></label>
+        </li>
+        <li>
+          <input type="checkbox" id="d2" />
+          <label for="d2"><img src="Gory.jpg" alt="Góry" /></label>
+        </li>
+        <li>
+          <input type="checkbox" id="d3" />
+          <label for="d3"><img src="Las.jpg" alt="Las" /></label>
+        </li>
+        <li>
+          <input type="checkbox" id="d4" />
+          <label for="d4"><img src="Miasto.jpg" alt="Miasto" /></label>
+        </li>
+
+        <li>
+          <input type="checkbox" id="d5" />
+          <label for="d5"><img src="Smoki.jpg" alt="Smoki" /></label>
+        </li>
+        <li>
+          <input type="checkbox" id="d6" />
+          <label for="d6"><img src="Kataklizm.jpg" alt="Kataklizm" /></label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="surveybox">
+      <div class="form-group">
+        <p>Napisz, co w grze talisman podoba Ci się najbardziej:</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="..."
+        ></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit" id="submit" class="submit-button">Wyślij</button>
+      </div>
+    </div>
+  </body>
+</html>
